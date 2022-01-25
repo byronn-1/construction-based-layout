@@ -1,0 +1,89 @@
+/* --------------------------
+  Main Styles
+--------------------------- */
+#nav, 
+#main-header{
+display:flex;
+flex-direction: column;
+z-index: 1;
+}
+
+#main-header{
+  position: fixed; 
+  top: 0; 
+  overflow: hidden;
+  width: 100%;
+  height:85px;
+}
+
+#site-logo{
+  width: 110px;
+  align-self: center;
+}
+
+#nav{
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 1.5em; */
+}
+
+#nav a {
+  display: block;
+  color: #797e83;
+  font-size: 1.125em;
+  text-align: center;
+  /* padding: .4em; */
+  border-bottom: 1px solid #ebecec;
+}
+
+#nav a:hover{
+  color: #0b0b0b;
+  border-bottom-color: #52bab3 ;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------
+  Media Queries
+--------------------------- */
+
+@media(min-width: 769px) {
+  #main-header{
+    justify-content: flex-end;
+  }
+  #site-logo{
+    width: 140px;
+  }
+  #nav{
+    margin-top: 3em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+#nav a{
+  border-bottom-color:transparent ;
+}
+}
+
+@media(min-width: 1025px){
+  #main-header{
+    background-color: white;
+    flex-direction: row;
+  }
+#site-logo{
+    margin-right: auto;
+  }
+  #nav{
+    margin-top: 0;
+    align-self: center;
+  }
+  #nav li {
+    margin-left: .65em;
+    margin-right: .65em;
+  }
+  #main{
+    margin-top: 85px;
+  }
+}
